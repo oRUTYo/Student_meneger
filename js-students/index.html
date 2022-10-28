@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./main.js"></script>
+</head>
+<body>
+    <main class="container">
+        <div class="btnAdd-container">
+            <button class="btn btn-dark btn-openForm">Добавить студента</button>
+        </div>
+        <div class="form">
+            <label for="NameInput" class="form-label">Имя*</label>
+            <input type="text" class="form-control input-name mb-2" id="NameInput" required>
+
+            <label for="SurnameInput" class="form-label">Фамилия*</label>
+            <input type="text" class="form-control input-sername mb-2" id="SurnameInput" required>
+
+            <label for="PatronymicInput" class="form-label">Отчество*</label>
+            <input type="text" class="form-control input-patronymic mb-2" id="PatronymicInput" required>
+
+            <label for="birhdateInput" class="form-label">Дата рождения*</label>
+            <input type="date" class="form-control input-birhdate mb-2" id="birhdateInput" required>
+
+            <label for="yearInput" class="form-label">Год поступления*</label>
+            <input type="number" class="form-control input-year mb-2" id="yearInput" value="2020" required>
+
+            <label for="faqultyInput" class="form-label">Факультет*</label>
+            <input type="text" class="form-control input-faqulty mb-4" id="faqultyInput" required>
+
+            <button class="btn btn-primary btn-addStudent">
+                Добавить студента
+            </button>
+          </div>
+        <table class="table">
+            <thead> 
+              <tr>
+                <th scope="col"><input type="text" class="form-control filter-fio" placeholder="ФИО"></th>
+                <th scope="col"><input type="text" class="form-control filter-faqulty" placeholder="Факультет"></th>
+                <th scope="col"><input type="text" class="form-control filter-yearStart" placeholder="Год начала обучения"></th>
+                <th scope="col"><input type="text" class="form-control filter-yearEnd" placeholder="Год окончания обучения"></th>
+                <th scope="col"><button class="btn btn-filter btn-dark">Поиск</button></th>
+              </tr>
+            </thead>
+          </table>
+        <table class="table students-table">
+            <thead> 
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col"><button class="btn btn-dark btn-fio">ФИО</button></th>
+                <th scope="col"><button class="btn btn-dark btn-faculty">Факультет</button></th>
+                <th scope="col"><button class="btn btn-dark btn-birhdate">Дата рождения</button></th>
+                <th scope="col"><button class="btn btn-dark btn-years">Годы обучения</button></th>
+              </tr>
+            </thead>
+            <tbody class="students-body">
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
